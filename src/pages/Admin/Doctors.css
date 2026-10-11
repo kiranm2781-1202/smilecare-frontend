@@ -1,0 +1,87 @@
+/* badge helpers */
+.badge { display: inline-block; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700; }
+.badge-blue { background: #dbeafe; color: #1e40af; }
+.badge-green { background: #d1fae5; color: #065f46; }
+
+/* Week day chip row */
+.week-days-row {
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;
+}
+.week-days-label {
+  font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.week-chips {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.day-chip-wrap {
+  position: relative; display: inline-flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.day-chip {
+  width: 52px; height: 52px; border-radius: 14px; border: 2px solid transparent;
+  font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.18s;
+  display: flex; align-items: center; justify-content: center;
+}
+.day-chip.off {
+  background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+}
+.day-chip.off:hover { background: #e2e8f0; color: #475569; }
+.day-chip.on {
+  background: #eff6ff; color: #1d4ed8; border-color: #93c5fd;
+}
+.day-chip.on:hover { background: #dbeafe; }
+.day-chip.on.sel {
+  background: #1d4ed8; color: #fff; border-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(29,78,216,0.35);
+}
+.day-chip-remove {
+  position: absolute; top: -6px; right: -6px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #dc2626; color: #fff; border: 2px solid #fff;
+  font-size: 9px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.15s;
+}
+.day-chip-wrap:hover .day-chip-remove { opacity: 1; }
+.week-days-hint { font-size: 11px; color: #94a3b8; }
+
+/* Day detail config panel */
+.day-detail-panel {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px;
+  padding: 20px 22px; margin-bottom: 16px;
+}
+.day-detail-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px; flex-wrap: wrap; gap: 12px;
+}
+.day-detail-title {
+  font-size: 16px; font-weight: 800; color: #0f172a;
+}
+.day-detail-times {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+
+/* Slot pills */
+.day-slots-hint { font-size: 12px; color: #94a3b8; margin-bottom: 10px; }
+.slots-pill-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.slot-pill {
+  padding: 8px 14px; border-radius: 100px; font-size: 12px; font-weight: 600;
+  cursor: pointer; border: 2px solid transparent; transition: all 0.18s;
+  display: flex; align-items: center; gap: 5px; white-space: nowrap;
+}
+.slot-pill.active {
+  background: #fff; color: #1d4ed8; border-color: #93c5fd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.slot-pill.active:hover { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+.slot-pill.blocked {
+  background: #f1f5f9; color: #cbd5e1; border-color: #e2e8f0; text-decoration: line-through;
+}
+.slot-pill.blocked:hover { background: #eff6ff; color: #1d4ed8; border-color: #93c5fd; text-decoration: none; }
+.slot-pill-x { font-size: 10px; color: #ef4444; }
+
+.day-prompt {
+  text-align: center; padding: 20px; color: #94a3b8; font-size: 13px;
+  background: #f8fafc; border-radius: 12px; border: 1px dashed #e2e8f0;
+  margin-bottom: 16px;
+}

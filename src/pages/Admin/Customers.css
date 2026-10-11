@@ -1,0 +1,46 @@
+/* Modal section tabs */
+.cust-modal-tabs {
+  display: flex; border-bottom: 2px solid #f1f5f9; padding: 0 24px; background: #fafbfc;
+}
+.cust-modal-tab {
+  display: flex; align-items: center; gap: 6px; padding: 14px 16px;
+  border: none; background: none; font-size: 13px; font-weight: 600;
+  color: #94a3b8; cursor: pointer; border-bottom: 2px solid transparent;
+  margin-bottom: -2px; transition: all 0.2s; white-space: nowrap;
+}
+.cust-modal-tab:hover { color: #1d4ed8; }
+.cust-modal-tab.active { color: #1d4ed8; border-bottom-color: #1d4ed8; background: none; }
+
+/* Modal footer nav */
+.modal-footer-nav { display: flex; align-items: center; }
+
+/* Prescription */
+.rx-header-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding-bottom: 16px; border-bottom: 1px solid #f1f5f9; margin-bottom: 16px;
+}
+.rx-empty {
+  text-align: center; padding: 36px 20px; color: #94a3b8; font-size: 14px;
+  background: #f8fafc; border-radius: 12px; border: 1px dashed #e2e8f0;
+}
+.rx-list { display: flex; flex-direction: column; gap: 14px; }
+.rx-card {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;
+  padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;
+}
+.rx-card-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;
+}
+.rx-num { font-size: 13px; font-weight: 700; color: #1d4ed8; }
+.rx-remove {
+  font-size: 12px; font-weight: 700; color: #dc2626; background: #fee2e2;
+  border: none; border-radius: 8px; padding: 4px 10px; cursor: pointer; transition: all 0.2s;
+}
+.rx-remove:hover { background: #fecaca; }
+
+/* field helpers */
+.field-hint { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+.field-textarea { resize: vertical; min-height: 72px; font-family: inherit; line-height: 1.5; }
+
+/* btn-sm */
+.btn.btn-sm { padding: 7px 14px; font-size: 13px; }

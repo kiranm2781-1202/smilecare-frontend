@@ -1,0 +1,11 @@
+.my-appts-page { background: #f8fafc; min-height: 100vh; }
+.appt-list { display: flex; flex-direction: column; gap: 16px; }
+.appt-card { padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.appt-service { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.appt-doctor { font-size: 14px; color: #1d4ed8; font-weight: 600; margin-bottom: 6px; }
+.appt-datetime { font-size: 13px; color: #64748b; }
+.appt-status { padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.empty-state { text-align: center; padding: 80px 20px; }
+.empty-state h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.empty-state p { color: #64748b; }
+@media (max-width: 600px) { .appt-card { flex-direction: column; align-items: flex-start; } }

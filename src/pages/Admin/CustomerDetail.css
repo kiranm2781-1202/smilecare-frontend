@@ -1,0 +1,135 @@
+/* Files Section */
+.files-section { display: flex; flex-direction: column; gap: 20px; }
+
+.files-upload-zone {
+  background: #fff; border: 2px dashed #93c5fd; border-radius: 16px;
+  padding: 40px 24px; text-align: center; cursor: pointer;
+  transition: all 0.2s;
+}
+.files-upload-zone:hover { border-color: #1d4ed8; background: #eff6ff; }
+.upload-icon { font-size: 40px; margin-bottom: 10px; }
+.upload-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.upload-sub { font-size: 13px; color: #64748b; }
+
+.files-empty { text-align: center; padding: 40px; color: #94a3b8; font-size: 14px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; }
+
+.files-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+
+.file-card {
+  background: #fff; border-radius: 14px; border: 1px solid #e2e8f0;
+  overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+.file-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
+
+.file-preview { position: relative; height: 120px; background: #f8fafc; display: flex; align-items: center; justify-content: center; }
+.file-img { width: 100%; height: 100%; object-fit: cover; }
+.file-icon-box { font-size: 48px; }
+
+.file-remove {
+  position: absolute; top: 6px; right: 6px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(0,0,0,0.6); color: #fff; border: none;
+  font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.2s;
+}
+.file-card:hover .file-remove { opacity: 1; }
+
+.file-info { padding: 10px 12px; }
+.file-name { font-size: 12px; font-weight: 600; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
+.file-meta { font-size: 11px; color: #94a3b8; }
+
+.file-add-more {
+  background: #f8fafc; border: 2px dashed #e2e8f0; border-radius: 14px;
+  height: 170px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 8px; cursor: pointer; transition: all 0.2s;
+}
+.file-add-more:hover { border-color: #93c5fd; background: #eff6ff; }
+.add-more-icon { font-size: 28px; font-weight: 300; color: #94a3b8; width: 44px; height: 44px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; }
+.add-more-label { font-size: 13px; color: #64748b; font-weight: 600; }
+
+/* Treatment modal file upload */
+.treat-upload-row {
+  display: flex; align-items: center; gap: 12px;
+}
+.treat-upload-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border: 2px solid #1d4ed8; border-radius: 10px;
+  background: #eff6ff; color: #1d4ed8; font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
+}
+.treat-upload-btn:hover { background: #1d4ed8; color: #fff; }
+.treat-upload-hint-inline { font-size: 12px; color: #94a3b8; }
+
+.treat-files-grid {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; align-items: flex-start;
+}
+.treat-thumb-card {
+  width: 80px; display: flex; flex-direction: column; gap: 5px;
+}
+.treat-thumb-preview {
+  position: relative; width: 80px; height: 72px; border-radius: 10px;
+  overflow: hidden; background: #f1f5f9; border: 1px solid #e2e8f0;
+  display: flex; align-items: center; justify-content: center;
+}
+.treat-thumb-img { width: 100%; height: 100%; object-fit: cover; }
+.treat-thumb-icon { font-size: 30px; }
+.treat-thumb-remove {
+  position: absolute; top: 3px; right: 3px; width: 18px; height: 18px;
+  border-radius: 50%; background: rgba(15,23,42,0.65); color: #fff;
+  border: none; font-size: 9px; cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+}
+.treat-thumb-name {
+  font-size: 10px; color: #64748b; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 80px;
+}
+.treat-thumb-add {
+  width: 80px; display: flex; flex-direction: column; gap: 5px; cursor: pointer;
+}
+.treat-thumb-add-inner {
+  width: 80px; height: 72px; border-radius: 10px;
+  border: 2px dashed #cbd5e1; background: #f8fafc;
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2px;
+  font-size: 11px; font-weight: 700; color: #94a3b8; transition: all 0.2s;
+}
+.treat-thumb-add-inner span:first-child { font-size: 20px; font-weight: 300; }
+.treat-thumb-add:hover .treat-thumb-add-inner { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; }
+.treat-thumb-add-label {
+  font-size: 10px; color: transparent; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 80px;
+  user-select: none;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(15,23,42,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 20px; backdrop-filter: blur(4px);
+  animation: fadeIn 0.15s ease; overflow-y: auto;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-box {
+  background: #fff; border-radius: 20px; width: 100%; max-width: 560px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: slideUp 0.2s ease;
+  max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 24px; border-bottom: 1px solid #f1f5f9;
+}
+.modal-header h3 { font-size: 18px; font-weight: 700; }
+.modal-close {
+  width: 32px; height: 32px; border-radius: 8px; border: none;
+  background: #f1f5f9; color: #64748b; font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+}
+.modal-close:hover { background: #e2e8f0; color: #0f172a; }
+.modal-body { padding: 24px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; flex: 1; }
+.modal-field { display: flex; flex-direction: column; gap: 6px; }
+.modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.modal-footer { display: flex; justify-content: flex-end; gap: 10px; padding: 16px 24px; border-top: 1px solid #f1f5f9; }
+.modal-footer .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }

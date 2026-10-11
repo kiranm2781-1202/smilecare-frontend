@@ -1,0 +1,31 @@
+.about-page { background: #f8fafc; }
+.about-story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-text p { font-size: 15px; color: #475569; line-height: 1.75; }
+.about-card-main {
+  background: linear-gradient(135deg, #1e3a8a, #0891b2);
+  color: #fff; border-radius: 24px; padding: 36px; text-align: center; margin-bottom: 20px;
+}
+.about-card-main h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.about-card-main p { font-size: 14px; opacity: 0.85; }
+.about-stats-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mini-stat { background: #fff; border-radius: 14px; padding: 18px; text-align: center; border: 1px solid #e2e8f0; }
+.mini-stat-val { font-size: 24px; font-weight: 800; color: #1d4ed8; }
+.mini-stat-label { font-size: 12px; color: #64748b; margin-top: 4px; }
+.values-section { background: #fff; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.value-card { padding: 28px; }
+.value-icon { font-size: 36px; margin-bottom: 14px; }
+.value-title { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.value-desc { font-size: 13px; color: #64748b; line-height: 1.65; }
+.accred-section { background: #f8fafc; }
+.accred-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.accred-card { padding: 28px 20px; text-align: center; }
+.accred-icon { font-size: 40px; margin-bottom: 12px; }
+.accred-label { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.accred-sub { font-size: 12px; color: #64748b; }
+.about-cta { background: linear-gradient(135deg, #1d4ed8, #0891b2); padding: 72px 0; }
+.about-cta h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: #fff; margin-bottom: 12px; }
+.about-cta p { color: rgba(255,255,255,0.8); font-size: 16px; }
+@media (max-width: 1024px) { .accred-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .about-story { grid-template-columns: 1fr; } .values-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .values-grid { grid-template-columns: 1fr; } .accred-grid { grid-template-columns: 1fr 1fr; } }
